@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="website_blog_form_inherit_gi_website_extend" model="ir.ui.view">
+        <field name="name">blog.blog.form</field>
+        <field name="model">blog.blog</field>
+        <field name="inherit_id" ref="website_blog.view_blog_blog_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='subtitle']" position="after">
+                    <field name="editors" widget="many2many_avatar_user"  />
+            </xpath>
+        </field>
+    </record>
+    <record id="website_post_form_inherit_gi_website_extend" model="ir.ui.view">
+        <field name="name">blog.post.form</field>
+        <field name="model">blog.post</field>
+        <field name="inherit_id" ref="website_blog.view_blog_post_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='blog_id']" position="attributes">
+                    <attribute name="domain">[('editors', 'in', uid)]</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="website_blog.action_blog_post" model="ir.actions.act_window">
+        <field name="domain">[('blog_id.editors', 'in', uid)]</field>
+    </record>
+</odoo>

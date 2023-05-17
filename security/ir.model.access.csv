@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_extend_hr_extend_admin,hr_extend.hr_extend,model_hr_extend_hr_extend,hr.group_hr_manager,1,1,1,1
+access_hr_extend_hr_extend_group_user,hr_extend.hr_extend,model_hr_extend_hr_extend,base.group_user,1,0,0,0
+
