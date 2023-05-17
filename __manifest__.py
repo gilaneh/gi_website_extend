@@ -11,10 +11,6 @@
 
     'author': "Arash Homayounfar",
     'website': "https://github.com/gilaneh/gi_website_extend",
-
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
     'category': 'Service Desk/Service Desk',
     'application': True,
     'version': '15.0.1',
